@@ -1,0 +1,21 @@
+@import '../vendor/fonts.css';
+@import '_variables.scss';
+@import '../vendor/materialize/sass/materialize.scss';
+
+
+* {
+    font-family: Work Sans;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+@import '_sidebar.scss';
+@import '_main.scss';
+@import '_plugin.scss';
+@import '_media.scss';

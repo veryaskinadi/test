@@ -1,0 +1,40 @@
+.select-wrapper input.select-dropdown {
+    height: 26px;
+    font-family: Work Sans;
+    font-size: 14px;
+    line-height: 16px;
+}
+.dropdown-content li {
+    min-height: initial;
+    span {
+        display: block;
+        font-family: Work Sans;
+        font-size: 12px;
+        padding: 8px 16px;
+        color: black;
+    }
+}
+[type=radio].with-gap:checked+span:after {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+}
+[type=radio].with-gap:checked+span:before  {
+    border: 1px solid $main-color;
+}
+[type=radio]:not(:checked)+span:before {
+    border: 1px solid $main-color;
+}
+[type=radio]+span:after, [type=radio]+span:before {
+    width: 12px;
+    height: 12px;
+    left: -4px;
+    top: 2px;
+}
+[type=radio]:checked+span, [type=radio]:not(:checked)+span {
+    padding-left: 18px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #111111;
+}

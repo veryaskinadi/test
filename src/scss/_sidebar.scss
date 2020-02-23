@@ -1,0 +1,19 @@
+.sidebar {
+    width: 138px;
+    background-color: $main-color;
+    min-height: 481px;
+    display: flex;
+    flex-direction: column-reverse;
+    &__text {
+        display: block;
+        font-family: PT Sans;
+        font-size: 49px;
+        line-height: 63px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        transform: rotate(-90deg);
+        transform-origin: 50% 0%;
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+}

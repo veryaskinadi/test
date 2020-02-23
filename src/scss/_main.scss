@@ -1,0 +1,87 @@
+.main {
+    padding-left: 20px;
+    padding-right: 23px;
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -0.46px;
+        margin-top: 39px;
+        margin-bottom: 0;
+    }
+    &__star {
+        font-size: 8px;
+        line-height: 16px;
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 11px;
+    }
+    &__input-block {
+        margin-top: 5px;
+        width: 50%;
+        &:nth-child(2n) {
+            padding-left: 8px;
+        }
+    }
+    &__input-date {
+        display: flex;
+    }
+    &__material-container {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-basis: content;
+    }
+    &__material-container_day {
+        flex-basis: 69px;
+        padding-right: 10px;
+    }
+    &__material-container_month {
+        flex-basis: 108px;
+        padding-right: 10px;
+    }
+    &__material-container_year {
+        flex-basis: 80px;
+    }
+    &__input[type=text]:not(.browser-default) {
+        height: 26px;
+    }
+    &__label {
+        position: initial !important;
+        font-weight: 300;
+        font-size: 12px !important;
+        line-height: 14px;
+        color: #7C7C7C;
+    }
+    &__button {
+        width: 154px;
+        height: 32px;
+        background-color: $main-color;
+        font-family: PT Sans;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border: none;
+    }
+    &__footer-login {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    &__footer-span {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        text-decoration-line: underline;
+        color: $main-color;
+    }
+    &__gender {
+        display: flex;
+    }
+    &__radio-block {
+        padding-right: 18px;
+    }
+}
