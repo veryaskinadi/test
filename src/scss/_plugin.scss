@@ -27,7 +27,7 @@
 [type=radio]+span:after, [type=radio]+span:before {
     width: 12px;
     height: 12px;
-    left: -4px;
+    left: -5px;
     top: 2px;
 }
 [type=radio]:checked+span, [type=radio]:not(:checked)+span {
@@ -37,4 +37,8 @@
     font-weight: normal;
     font-size: 14px;
     color: #111111;
+}
+
+input[type=password]:not(.browser-default), input[type=text]:not(.browser-default) {
+    height: 26px;
 }

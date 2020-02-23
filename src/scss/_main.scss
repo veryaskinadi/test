@@ -1,6 +1,6 @@
 .main {
     padding-left: 20px;
-    padding-right: 23px;
+    padding-right: 22px;
     &__title {
         font-weight: 500;
         font-size: 22px;
@@ -45,9 +45,6 @@
     &__material-container_year {
         flex-basis: 80px;
     }
-    &__input[type=text]:not(.browser-default) {
-        height: 26px;
-    }
     &__label {
         position: initial !important;
         font-weight: 300;
@@ -66,10 +63,15 @@
         color: #FFFFFF;
         border: none;
     }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+    }
     &__footer-login {
         font-weight: 300;
         font-size: 13px;
-        line-height: 15px;
+        line-height: 30px;
     }
     &__footer-span {
         font-weight: 500;
@@ -82,6 +84,6 @@
         display: flex;
     }
     &__radio-block {
-        padding-right: 18px;
+        padding-right: 19px;
     }
 }
