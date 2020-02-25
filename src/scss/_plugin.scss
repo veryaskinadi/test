@@ -1,8 +1,10 @@
 .select-wrapper input.select-dropdown {
-    height: 26px;
     font-family: Work Sans;
     font-size: 14px;
     line-height: 16px;
+    &:focus {
+        border-bottom: 1px solid $main-color
+    }
 }
 .dropdown-content li {
     min-height: initial;
