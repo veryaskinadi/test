@@ -1,6 +1,7 @@
 @import '../vendor/fonts.css';
 @import '_variables.scss';
 @import '../vendor/materialize/sass/materialize.scss';
+@import '../vendor/animate.css';
 
 
 * {
@@ -23,4 +24,5 @@ body {
 @import '_sidebar.scss';
 @import '_main.scss';
 @import '_plugin.scss';
+@import '_animation.scss';
 @import '_media.scss';

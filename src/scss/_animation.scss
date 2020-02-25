@@ -1,0 +1,23 @@
+.main__animated {
+    &_LastName {
+        animation-delay: 0.5s;
+    }
+    &_nationality {
+        animation-delay: 1s;
+    }
+    &_email {
+        animation-delay: 1.5s;
+    }
+    &_date {
+        animation-delay: 2s;
+    }
+    &_gender {
+        animation-delay: 2.5s;
+    }   
+    &_password {
+        animation-delay: 3s;
+    }
+    &_ConfirmPassword {
+        animation-delay: 3.5s;
+    }
+}
