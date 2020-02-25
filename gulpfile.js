@@ -22,4 +22,31 @@ gulp.task('watch', function() {
     gulp.watch("src/scss/*.+(scss|sass)", gulp.parallel('styles'));
 });
 
-gulp.task('default', gulp.parallel('styles','watch'));
+gulp.task('html', function() {
+    return gulp.src("src/*.html")
+        .pipe(htmlmin({collapseWhitespase: true }))
+        .pipe(gulp.dest("docs/"));
+});
+
+gulp.task('scripts', function() {
+    return gulp.src("src/js/*.js")
+        .pipe(gulp.dest("docs/js"));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src("src/fonts/**/*")
+        .pipe(gulp.dest("docs/fonts"));
+});
+
+gulp.task('images', function() {
+    return gulp.src("src/img/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("docs/img"));
+});
+
+gulp.task('vendor', function() {
+    return gulp.src("src/vendor/*")
+        .pipe(gulp.dest("docs/vendor"));
+});
+
+gulp.task('default', gulp.parallel('styles','watch', 'html', 'scripts', 'fonts', 'images', 'vendor'));
