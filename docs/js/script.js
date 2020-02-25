@@ -31,7 +31,7 @@ $(document).ready(function(){
         } else {
             $(this).addClass('main__input_error')  
             $(this).removeClass('main__input_correct') 
-            addErrorMessage('password', 'Пароль должен содержать минимум 8 символов, заглавные и строчные буквы, а также цифры')
+            addErrorMessage('password', 'Пароль должен содержать минимум 8 символов, заглавные и строчные латинские буквы, а также цифры')
         }
     })
 

@@ -45,7 +45,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('vendor', function() {
-    return gulp.src("src/vendor/*")
+    return gulp.src("src/vendor/**/*")
         .pipe(gulp.dest("docs/vendor"));
 });
 
