@@ -81,39 +81,6 @@
         line-height: 14px;
         color: #7C7C7C;
     }
-    &__button {
-        width: 154px;
-        height: 32px;
-        background-color: $main-color;
-        font-family: PT Sans;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-        color: #FFFFFF;
-        border: none;
-        &:focus {
-            background-color: $main-color;
-        }
-    }
-    &__footer {
-        padding-top: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        bottom: 34px;
-        &-login {
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 30px;
-        }
-        &-span {
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 15px;
-            text-decoration-line: underline;
-            color: $main-color;
-        }
-    }
     &__gender {
         display: flex;
     }

@@ -1,0 +1,33 @@
+.footer {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 34px;
+    &__login {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 30px;
+    }
+    &__span {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        text-decoration-line: underline;
+        color: $main-color;
+    }
+    &__button {
+        width: 154px;
+        height: 32px;
+        background-color: $main-color;
+        font-family: PT Sans;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border: none;
+        &:focus {
+            background-color: $main-color;
+        }
+    }
+}

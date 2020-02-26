@@ -1,0 +1,23 @@
+.registered {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 22px 34px 20px;
+    &__wrapper {
+        margin-top: 193px;
+        margin-left: 9%;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -0.46px;
+    }
+    &__text {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
