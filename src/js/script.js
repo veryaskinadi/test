@@ -48,7 +48,7 @@ $(document).ready(function(){
             }
             console.log(url)
             $.ajax({
-                method: "POST",
+                method: "GET",
                 url: url,
                 })
                 .done(function(response) {
