@@ -3,7 +3,8 @@
     font-size: 14px;
     line-height: 16px;
     &:focus {
-        border-bottom: 1px solid $main-color
+        border-bottom: 1px solid $main-color;
+        box-shadow: none;
     }
 }
 .dropdown-content li {
@@ -19,12 +20,15 @@
 [type=radio].with-gap:checked+span:after {
     background-color: $main-color;
     border: 1px solid $main-color;
+    box-shadow: none;
 }
 [type=radio].with-gap:checked+span:before  {
     border: 1px solid $main-color;
+    box-shadow: none;
 }
 [type=radio]:not(:checked)+span:before {
     border: 1px solid $main-color;
+    box-shadow: none;
 }
 [type=radio]+span:after, [type=radio]+span:before {
     width: 12px;
@@ -44,4 +48,7 @@
 input[type=password]:not(.browser-default), input[type=text]:not(.browser-default) {
     height: 26px;
     border-bottom: 1px solid #F2F2F2;
+    &:focus:not([readonly]) {
+        box-shadow: none;
+    }
 }

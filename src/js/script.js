@@ -37,6 +37,32 @@ $(document).ready(function(){
 
     $(document).on('change', '#ConfirmPassword', comparePasswords)
     $(document).on('change', '#password', comparePasswords)
+    
+    $(document).on('submit', '.main__form', function(event) {
+        event.preventDefault()
+        if (Object.keys(window.errors).length == 0) {
+            let url = "server-ok.json"
+            const email = $(event.target).find('#email').val()
+            if (!email) {
+                url = "server-error.json"
+            }
+            console.log(url)
+            $.ajax({
+                method: "POST",
+                url: url,
+                })
+                .done(function(response) {
+                    if (response.result==='success') {
+                        $('.main').css('display', 'none')
+                        $('.registered').css('display', 'flex')
+                    } else {
+                        $('.footer__button').addClass('footer__button_animated')
+                    }
+                });
+        } else {
+            $('.footer__button').addClass('footer__button_animated')
+        }
+    })
 });
 
 function addErrorMessage(type, text) {

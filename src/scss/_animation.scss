@@ -1,23 +1,62 @@
-.main__animated {
-    &_LastName {
-        animation-delay: 0.5s;
-    }
-    &_nationality {
-        animation-delay: 1s;
-    }
-    &_email {
-        animation-delay: 1.5s;
-    }
-    &_date {
-        animation-delay: 2s;
-    }
-    &_gender {
-        animation-delay: 2.5s;
+// .main__animated {
+//     &_LastName {
+//         animation-delay: 0.5s;
+//     }
+//     &_nationality {
+//         animation-delay: 1s;
+//     }
+//     &_email {
+//         animation-delay: 1.5s;
+//     }
+//     &_date {
+//         animation-delay: 2s;
+//     }
+//     &_gender {
+//         animation-delay: 2.5s;
+//     }   
+//     &_password {
+//         animation-delay: 3s;
+//     }
+//     &_ConfirmPassword {
+//         animation-delay: 3.5s;
+//     }
+// }
+.slideUp {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;    
+ 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+ 
+    animation-timing-function: ease;    
+    -webkit-animation-timing-function: ease;
+ 
+    visibility: visible;         
+}
+ 
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }       
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }   
-    &_password {
-        animation-delay: 3s;
+    
+}
+ 
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        opacity: 0;
     }
-    &_ConfirmPassword {
-        animation-delay: 3.5s;
-    }
+    100% {
+        -webkit-transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }   
+}
+.footer__button_animated {
+    color: red;
 }

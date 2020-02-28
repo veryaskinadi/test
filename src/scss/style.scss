@@ -1,8 +1,6 @@
 @import '../vendor/fonts.css';
 @import '_variables.scss';
 @import '../vendor/materialize/sass/materialize.scss';
-@import '../vendor/animate.css';
-
 
 * {
     font-family: Work Sans;
@@ -17,7 +15,7 @@ html {
 body {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    min-height: 100%;
 
 }
 
