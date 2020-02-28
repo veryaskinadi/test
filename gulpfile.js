@@ -49,4 +49,9 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest("docs/vendor"));
 });
 
-gulp.task('default', gulp.parallel('styles','watch', 'html', 'scripts', 'fonts', 'images', 'vendor'));
+gulp.task('server', function() {
+    return gulp.src("src/*.json")
+        .pipe(gulp.dest("docs/"));
+});
+
+gulp.task('default', gulp.parallel('styles','watch', 'html', 'scripts', 'fonts', 'images', 'vendor', 'server'));
