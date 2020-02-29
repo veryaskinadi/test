@@ -4,10 +4,10 @@ $(document).ready(function(){
     // Замена стрелочки в раскрывающемся списке формы
     $('svg.caret').replaceWith(`<svg class="main__select-arrow" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.91815 0.977289C7.80788 0.874229 7.62871 0.874229 7.51845 0.977289L4.00387 4.26875L0.482394 0.977289C0.372132 0.874229 0.192957 0.874229 0.082696 0.977289C-0.0275653 1.08035 -0.0275653 1.24782 0.082696 1.35088L3.79713 4.8227C3.85226 4.87423 3.92117 4.89999 3.99698 4.89999C4.06589 4.89999 4.14169 4.87423 4.19682 4.8227L7.91125 1.35088C8.02841 1.24782 8.02841 1.08035 7.91815 0.977289Z" fill="black"/></svg>`);
 
-    // Массив с сообщениями об ошибках
-
+    // Объект с сообщениями об ошибках
     window.errors = {}
-    // Поле ввода email, валидация, создание галочки.
+
+    // Валидация email
     $(document).on('change', '#email', function(){
         const email = $(this).val()
         const template = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/
@@ -24,7 +24,7 @@ $(document).ready(function(){
         }
     }); 
 
-    // Поле ввода пароля, валидация
+    // Валидация пароля
     $(document).on('change', '#password', function() {
         const password = $(this).val()
         const template = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g
@@ -45,6 +45,7 @@ $(document).ready(function(){
     // Отправка формы
     $(document).on('submit', '.main__form', function(event) {
         event.preventDefault()
+        $('.footer__button').removeClass('footer__button_animated')
         if (Object.keys(window.errors).length == 0) {
             let url = "server-ok.json"
             const email = $(event.target).find('#email').val()

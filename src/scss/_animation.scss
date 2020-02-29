@@ -37,8 +37,6 @@
 }
 
 .footer__button_animated {
-    &:active {
-        color: red;
         animation-name: slideLeft;
         -webkit-animation-name: slideLeft;  
         
@@ -49,8 +47,6 @@
         -webkit-animation-timing-function: ease;     
         
         visibility: visible !important; 
-    }
-    
 }
     
 @keyframes slideLeft {
