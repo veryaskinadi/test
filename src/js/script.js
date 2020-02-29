@@ -45,7 +45,6 @@ $(document).ready(function(){
     // Отправка формы
     $(document).on('submit', '.main__form', function(event) {
         event.preventDefault()
-        $('.footer__button').removeClass('footer__button_animated')
         if (Object.keys(window.errors).length == 0) {
             let url = "server-ok.json"
             const email = $(event.target).find('#email').val()
@@ -68,6 +67,9 @@ $(document).ready(function(){
         } else {
             $('.footer__button').addClass('footer__button_animated')
         }
+            setTimeout(function(){
+                $('.footer__button').removeClass('footer__button_animated')
+            }, 200)
     })
 });
 
@@ -85,13 +87,11 @@ function removeErrorMessage(type) {
 
 // Вывод сообщений об ошибках
 function showErrors() {
-    $('.footer__button').removeClass('footer__button_animated')
     $('.main__subtitle').html('&#128943;')
     $('.main__subtitle').removeClass('main__subtitle_text')
     $('.main__subtitle').addClass('main__subtitle_star')
     $('.main__error-container').html('')
     if (Object.keys(window.errors).length > 0) {
-        $('.footer__button').removeClass('footer__button_animated')
         $('.main__subtitle').html('Use the form below to create your account.')
         $('.main__subtitle').removeClass('main__subtitle_star')
         $('.main__subtitle').addClass('main__subtitle_text')

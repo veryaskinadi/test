@@ -45,7 +45,6 @@ $(document).ready(function(){
     // Отправка формы
     $(document).on('submit', '.main__form', function(event) {
         event.preventDefault()
-        $('.footer__button').removeClass('footer__button_animated')
         if (Object.keys(window.errors).length == 0) {
             let url = "server-ok.json"
             const email = $(event.target).find('#email').val()
@@ -68,6 +67,9 @@ $(document).ready(function(){
         } else {
             $('.footer__button').addClass('footer__button_animated')
         }
+            setTimeout(function(){
+                $('.footer__button').removeClass('footer__button_animated')
+            }, 200)
     })
 });
 
