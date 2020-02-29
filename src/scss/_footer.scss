@@ -15,6 +15,7 @@
         line-height: 15px;
         text-decoration-line: underline;
         color: $main-color;
+        cursor: pointer;
     }
     &__button {
         width: 154px;
@@ -26,6 +27,7 @@
         line-height: 18px;
         color: #FFFFFF;
         border: none;
+        cursor: pointer;
         &:focus {
             background-color: $main-color;
         }
